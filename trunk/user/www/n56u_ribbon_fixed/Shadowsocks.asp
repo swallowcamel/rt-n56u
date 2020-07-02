@@ -1388,13 +1388,6 @@ setTimeout('document.getElementById("btn_ctime").style.display="none";',1000);
 											<div id="wnd_ss_cfg">
 												<div class="alert alert-info" style="margin: 10px;">
 													一个兼容Shadowsocks、ShadowsocksR 、Vmess等协议的游戏加速工具。
-													<div><span style="color:#E53333;">注意:</span></div>
-													<div><span
-															style="color:#E53333;">1.chinadns-ng仅当绕过大陆模式有域名污染时才建议打开来分流防止污染！当然会占用一部分内存。</span>
-													</div>
-													<div><span
-															style="color:#E53333;">2.服务器确定连上后,网页还是打不开,可尝试切换国外DNS</span>
-													</div>
 												</div>
 												<table width="100%" cellpadding="4" cellspacing="0" class="table">
 													<tr>
@@ -1521,17 +1514,17 @@ setTimeout('document.getElementById("btn_ctime").style.display="none";',1000);
 														</td>
 													</tr>
 													<tr id="row_pdnsd_enable">
-														<th width="50%">DNS解析方式(仅GFW模式生效)</th>
+														<th width="50%">DNS解析方式</th>
 														<td>
 															<select name="pdnsd_enable" id="pdnsd_enable" class="input"
 																style="width: 200px;" onchange="switch_dns()">
-																<option value="0">使用dns2tcp查询</option>
+																<option value="0">使用DNS2TCP查询</option>
 																<option value="1">使用其它服务器查询</option>
 															</select>
 														</td>
 													</tr>
 													<tr>
-														<th>加载chinadns-ng(仅绕过模式生效)</th>
+														<th>加载CHINADNS-NG</th>
 														<td>
 															<div class="main_itoggle">
 																<div id="ss_chdns_on_of">
@@ -1552,20 +1545,17 @@ setTimeout('document.getElementById("btn_ctime").style.display="none";',1000);
 														</td>
 													</tr>
 													<tr id="row_china_dns" style="display:none;">
-														<th width="50%">国内DNS(仅chinadns-ng生效)</th>
+														<th width="50%">国内DNS</th>
 														<td>
 															<select name="china_dns" class="input"
-																style="width: 200px;">
-																<option value="223.5.5.5#53">阿里DNS (223.5.5.5)</option>
-																<option value="114.114.114.114#53">114 DNS
-																	(114.114.114.114)</option>
+                                                                style="width: 200px;">
+                                                                <option value="1.2.4.8#53">CNNIC DNS (1.2.4.8)</option>
+                                                                <option value="223.5.5.5#53">阿里DNS (223.5.5.5)</option>
+																<option value="119.29.29.29#53">腾讯DNS(119.29.29.29)</option>
+																<option value="180.76.76.76#53">百度DNS (180.76.76.76)</option>
+                                                                <option value="114.114.114.114#53">114 DNS (114.114.114.114)</option>
 																<option value="117.50.11.11#53">OneDNS (117.50.11.11)
 																</option>
-																<option value="180.76.76.76#53">百度DNS (180.76.76.76)
-																</option>
-																<option value="119.29.29.29#53">DNSPOD DNS
-																	(119.29.29.29)</option>
-																<option value="1.2.4.8#53">cnnic DNS (1.2.4.8)</option>
 															</select>
 														</td>
 													</tr>
@@ -1573,7 +1563,9 @@ setTimeout('document.getElementById("btn_ctime").style.display="none";',1000);
 														<th width="50%">国外DNS</th>
 														<td>
 															<select name="tunnel_forward" class="input"
-																style="width: 200px;">
+                                                                style="width: 200px;">
+                                                                <option value="1.1.1.1#53">Cloudflare DNS (1.1.1.1)
+																</option>
 																<option value="8.8.4.4#53">Google Public DNS (8.8.4.4)
 																</option>
 																<option value="8.8.8.8#53">Google Public DNS (8.8.8.8)
@@ -1594,8 +1586,7 @@ setTimeout('document.getElementById("btn_ctime").style.display="none";',1000);
 																</option>
 																<option value="4.2.2.4#53">Level 3 Public DNS (4.2.2.4)
 																</option>
-																<option value="1.1.1.1#53">Cloudflare DNS (1.1.1.1)
-																</option>
+																
 																<option value="114.114.114.114#53">Oversea Mode DNS-1
 																	(114.114.114.114)</option>
 																<option value="114.114.115.115#53">Oversea Mode DNS-1
